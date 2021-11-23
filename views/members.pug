@@ -1,0 +1,14 @@
+extends layout
+
+block head
+    script(src='https://www.google.com/recaptcha/api.js' async='' defer='')
+
+block content
+    .pb-2.mt-2.mb-4.border-bottom
+        h3 Members
+    ul
+        for member in members
+            p= member.profile.name
+            a(href='/members') View Profile
+            br
+            br
